@@ -1,0 +1,30 @@
+<section class="container" *ngIf="carga && !datos">
+    <div class="">
+        <h2>Producto NRO: {{id}}</h2>
+        <span routerLink="/listaproductos"><button>VOLVER</button> <span> volver </span></span>
+    </div>
+    <div class="">
+        <form>
+            <div>
+                <label>Codigo de barras:</label>
+                <input type="text" [value]="productos[id-1].codigo" disabled>
+            </div>
+            <div>
+                <label>Descripción:</label>
+                <input type="text" [value]="productos[id-1].descripcion" disabled>
+            </div>
+            <div>
+                <label>Precio de venta:</label>
+                <input type="text" [value]="productos[id-1].precioCompra" disabled>
+            </div>
+            <div>
+                <label>Precio de compra:</label>
+                <input type="text" [value]="productos[id-1].precioVenta" disabled>
+            </div>
+            <div>
+                <label>Existencia:</label>
+                <input type="text" [value]="productos[id-1].existencia" disabled>
+            </div>
+        </form>
+    </div>
+</section>
